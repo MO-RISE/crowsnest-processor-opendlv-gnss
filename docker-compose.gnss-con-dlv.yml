@@ -1,0 +1,14 @@
+version: '3'
+services:
+
+  crowsnest-processor-gnss-opendlv:
+    build: .
+    image: cw-gnss-opendlv
+    container_name: cw-gnss-opendlv-0
+    restart: unless-stopped
+    network_mode: "host"
+    environment:
+      - CLUON_CID=65
+      - MQTT_BROKER_HOST=localhost
+      - MQTT_BROKER_PORT=1883
+      - MQTT_BASE_TOPIC=CROWSNEST/SEAHORSE/GNSS/0/JSON
