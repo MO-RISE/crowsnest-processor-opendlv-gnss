@@ -26,7 +26,7 @@ services:
 
 # From MO RISE image register
   crowsnest-processor-gnss-opendlv:
-    image: ghcr.io/mo-rise/crowsnest-processor-opendlv-gnss:0.0.1
+    image: ghcr.io/mo-rise/crowsnest-processor-opendlv-gnss:latest
     container_name: cw-gnss-opendlv-0
     restart: unless-stopped
     network_mode: "host"
